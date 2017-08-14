@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Set sequence of bean loading -->
+	<bean id="beanA" class="com.apress.prospring4.ch3.BeanA" depends-on="beanB" />
+	<bean id="beanB" class="com.apress.prospring4.ch3.BeanB" />
+	
+<!-- 	If the definition of the parent bean should not be searchable from
+	the ApplicationContext, you can add the abstract = "true" attribute
+	to the <bean> descriptor that declares the parent bean,	
+ -->
+ 	<bean id="inheritChild" class="com.apress.prospring4.ch3.xml.SimpleBean"
+	parent="inheritParent" р:аgе="ЗЗ"/>
+</beans>

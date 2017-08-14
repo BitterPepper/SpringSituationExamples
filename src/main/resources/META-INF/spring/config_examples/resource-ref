@@ -1,0 +1,7 @@
+<root-node>
+	<resource-ref>
+		<res-ref-name>jdbc/prospring</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Containre</res-auth>
+	</resource-ref>
+</root-node>

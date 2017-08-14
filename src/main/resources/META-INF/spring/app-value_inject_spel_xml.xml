@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="injectSimpleConfig" class="com.macbook.value_inject_spell_xml.InjectSimpleConfig"/>
+	<bean id="injectSimpleSpel" class="com.macbook.value_inject_spell_xml.InjectSimpleSpel"
+	p:name="#{injectSimpleConfig.name}"
+	p:age="#{injectSimpleConfig.age-1}"
+	p:height="#{injectSimpleConfig.height}"
+	p:programmer="#{injectSimpleConfig.programmer}"
+	p:ageInSecond="#{injectSimpleConfig.ageInSecond}"/>
+ </beans>

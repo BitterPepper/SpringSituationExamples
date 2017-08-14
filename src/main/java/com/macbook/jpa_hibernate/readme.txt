@@ -1,0 +1,1 @@
+Before run the findByCriteriaQuery test, you need to trigger maven:generate-source phase

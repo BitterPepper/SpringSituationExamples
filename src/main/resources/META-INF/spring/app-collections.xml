@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="forMap" class="com.macbook.collections.ForMap"></bean>
+	<bean id="injectCollection" class="com.macbook.collections.CollectionInjection">
+		<property name="map">
+			<map>
+				<entry key="someValue">
+					<value>Hello World!</value>
+				</entry>
+				<entry key="somBean">
+					<ref bean="forMap"/>
+				</entry>
+			</map>
+		</property>
+		<property name="props">
+			<props>
+				<prop key="firstName">Chris</prop>
+				<prop key="secondName">Shaefer</prop>
+			</props>
+		</property>
+		<property name="set">
+			<set>
+				<value>Hello World</value>
+				<ref bean="forMap"/>
+			</set>
+		</property>
+		<property name="list">
+			<list>
+				<value>Hello World!</value>
+				<ref bean="forMap"/>
+			</list>
+		</property>
+	</bean>
+</beans>
